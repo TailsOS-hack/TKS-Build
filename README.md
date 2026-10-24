@@ -49,6 +49,16 @@ These are anonymous cohort means derived from 200 hash-verified saved native arr
 
 **200 versus 230 maps:** this new heatmap figure uses only the original100 subset: 100 cases × 2 models = 200 maps. The full corner audit's location analysis used 115 cases × 2 models = 230 maps. Its additional eight historical class-balanced cases and seven historically selected gallery cases (30 maps across both models) are excluded from the new cohort-mean figure. No cases were newly inferred or substituted.
 
+### Existing same-scan comparison in the source repository
+
+[View the original same-scan Grad-CAM panel (external source)](https://github.com/TailsOS-hack/Dementia-Paper/blob/0c007e193462facb024dc98767f349116e8cdd16/docs/kevin_paper_20261011/round2_publication/artifacts/stage/attribution_diagnostics/cases/image_002.png).
+
+The archived panel shows the same input with **old baseline**, **Round 1 candidate 3** (stage-only seed `20261012`) and **Round 2 selected** (seed `20261011`), each with a native 7×7 map and an overlay. It belongs to the separately documented robustness follow-up, not a replacement for the two-model corner audit above. The linked file was verified against the original local panel by its Git blob hash, `8615796e262604a96aea953a46636287b8be2432`.
+
+This selected qualitative example has more peripheral emphasis in the Round 1 overlay and more central emphasis in the Round 2 overlay. Per-map normalization, interpolation and broad receptive fields mean that appearance alone does not establish dependence on input-corner pixels, anatomical validity, or a corrected shortcut. The source panel retains its **diagnostic-only warning**: the follow-up attribution replay exceeded the fixed probability tolerance in two of 100 cases, although predicted classes agreed. The core masking controls argued against dominant corner reliance under the tested conditions.
+
+This is an ordinary source link; no scan pixels are embedded or copied into this package. The underlying legacy-image provenance and redistribution-license chain remain unresolved in the source records. Existing public availability is not a claim that those rights have been verified.
+
 ## What this taught me
 
 A colored corner in an upsampled heatmap is a reason to investigate, not evidence that corner pixels cause the prediction. Comparing location, fill and equal-area controls changed the interpretation: central content mattered more in this audit. Related mitigation work used supervised robustness training with conservative background changes and validation guards; its [separate development results](docs/FOLLOWUP.md) do not prove source artifacts were removed. The hypothetical added-corner-marker experiment from the Learn article remains a different, proposed test.

@@ -1,0 +1,10 @@
+TKS Build — source and scope notice
+
+This package contains copies of Arman Kazi's existing research code and aggregate audit outputs, plus documentation and a package verifier created for this TKS Build.
+
+Source repository: https://github.com/TailsOS-hack/Dementia-Image-Classification
+Exact source paths and SHA256 hashes: provenance/source_manifest.json
+
+No explicit repository-wide code license was found in the inspected source root. This package does not invent or grant a new open-source license for copied code. Source ownership and third-party licenses remain with their respective owners. Public availability alone is not a redistribution license for datasets or model weights.
+
+No raw MRI images, individual-case records, model weights, native arrays, private/restricted datasets or credentials are included. Data-provider terms must be checked before obtaining or redistributing inputs. The source project's clinical and patient-independence limitations remain in force.

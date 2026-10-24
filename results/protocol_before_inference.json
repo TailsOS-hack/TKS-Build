@@ -1,0 +1,96 @@
+{
+  "seed": 20261012,
+  "n": 160,
+  "class_order": [
+    "MildDemented",
+    "ModerateDemented",
+    "NonDemented",
+    "VeryMildDemented"
+  ],
+  "per_class": 40,
+  "unique_hash_groups": 160,
+  "selection": "SHA256(seed|path) ordering, one new-validation image per prepared hash group per class; no outcome-based sample selection",
+  "models": {
+    "old_baseline": "a8cc03aea74f5310c1fc7936c72f94a44e55af11e2ada2a8ba5f8edd6d924db5",
+    "candidate_3": "642c39da1adecd7925cb4057718772af2603ef6077df676c4c4abd1907c3356e"
+  },
+  "scenarios": [
+    {
+      "name": "clean",
+      "masked_fraction": 0,
+      "fill": null
+    },
+    {
+      "name": "corners32_erase_black",
+      "masked_fraction": 0.08163265306122448,
+      "fill": "black"
+    },
+    {
+      "name": "corners32_only_black",
+      "masked_fraction": 0.9183673469387755,
+      "fill": "black"
+    },
+    {
+      "name": "corners32_matched_center_erase_black",
+      "masked_fraction": 0.08163265306122448,
+      "fill": "black"
+    },
+    {
+      "name": "corners32_erase_imagenet_mean",
+      "masked_fraction": 0.08163265306122448,
+      "fill": "imagenet_mean"
+    },
+    {
+      "name": "corners32_only_imagenet_mean",
+      "masked_fraction": 0.9183673469387755,
+      "fill": "imagenet_mean"
+    },
+    {
+      "name": "corners32_matched_center_erase_imagenet_mean",
+      "masked_fraction": 0.08163265306122448,
+      "fill": "imagenet_mean"
+    },
+    {
+      "name": "border16_erase_black",
+      "masked_fraction": 0.2653061224489796,
+      "fill": "black"
+    },
+    {
+      "name": "border16_only_black",
+      "masked_fraction": 0.7346938775510204,
+      "fill": "black"
+    },
+    {
+      "name": "border16_matched_center_erase_black",
+      "masked_fraction": 0.2653061224489796,
+      "fill": "black"
+    },
+    {
+      "name": "border16_erase_imagenet_mean",
+      "masked_fraction": 0.2653061224489796,
+      "fill": "imagenet_mean"
+    },
+    {
+      "name": "border16_only_imagenet_mean",
+      "masked_fraction": 0.7346938775510204,
+      "fill": "imagenet_mean"
+    },
+    {
+      "name": "border16_matched_center_erase_imagenet_mean",
+      "masked_fraction": 0.2653061224489796,
+      "fill": "imagenet_mean"
+    }
+  ],
+  "evaluation_only": true,
+  "random_control": "Not added: its four-class performance would not meaningfully test learned shortcut reliance. Existing parameter-randomization controls remain available.",
+  "limitations": [
+    "Post-hoc validation diagnostic, not a new clinical or independent patient test.",
+    "New validation images may have old-baseline development exposure; comparisons are descriptive.",
+    "Native 7x7 map mass uses per-map min/max normalized nonnegative scores; it is not an anatomical probability.",
+    "Native corner cells have broad overlapping receptive fields; high corner map mass alone does not prove input-corner reliance.",
+    "A nonblack-pixel threshold is only a display support proxy, not a brain mask.",
+    "Erasure creates out-of-distribution images; location and fill controls help but cannot prove absence of all shortcuts."
+  ],
+  "stage_manifest_sha256": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
+  "script_sha256": "0262f2cd0b4c62eaabd56814d2574e81e95b0c444bfdcb8f15e29cedf6c6b976"
+}

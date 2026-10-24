@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "Package integrity, aggregate arithmetic, source syntax, bounded inventory and local documentation links only; no model inference or per-image metric regeneration.",
+  "immutable_payload_files": 37,
+  "source_python_files_parsed": 11,
+  "aggregate_metric_records_checked": 26,
+  "original_probability_rows_not_recomputed": 4160,
+  "local_links_checked": 24,
+  "raw_images_or_weights_included": false,
+  "training_or_inference_performed": false,
+  "checks_not_run": [
+    "Full original probability recomputation",
+    "Model inference or training",
+    "Clean-install ML environment reproduction",
+    "External URL availability",
+    "Clinical or patient-independent validation"
+  ]
+}

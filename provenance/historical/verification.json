@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "validation_images": 160,
+  "unique_hash_groups": 160,
+  "per_class": 40,
+  "models": 2,
+  "scenarios_per_model": 13,
+  "predictions_recomputed_and_verified": 4160,
+  "metric_records_verified": 26,
+  "all_prior_map_and_input_hashes_match": true,
+  "checkpoint_states_unchanged": true,
+  "native_gallery_panels": 115,
+  "inference_on_original100_or_test": false,
+  "training": false,
+  "mask_area_and_center_control_checks": true,
+  "verifier_sha256": "7c288ec99c0e4490593a25bace42fd8bb6a5d252716c13bff8efffaf0bfe4f52"
+}

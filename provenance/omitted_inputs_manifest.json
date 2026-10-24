@@ -1,0 +1,36 @@
+{
+  "reason": "No raw images, individual-case records, native maps, model weights, credentials or restricted datasets are redistributed.",
+  "required_for_full_reproduction": [
+    {
+      "path": "models/alzheimers_classifier.pt",
+      "sha256": "a8cc03aea74f5310c1fc7936c72f94a44e55af11e2ada2a8ba5f8edd6d924db5",
+      "purpose": "Frozen old MobileNetV3-Large checkpoint"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/runpod_blackwell_20261011/stage_only_seed20261012/best.pt",
+      "sha256": "642c39da1adecd7925cb4057718772af2603ef6077df676c4c4abd1907c3356e",
+      "purpose": "Frozen candidate 3 MobileNetV3-Large checkpoint"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/runpod_blackwell_20261011/validation_selection_before_evaluation.json",
+      "purpose": "Validation-selection record; candidate 3 stage_only, seed 20261012"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/prepared/stage_manifest.csv",
+      "sha256": "66a0cd9409d61edd32ee137154f769c749664f255ddebe461cf7683c1f4ba7b9",
+      "purpose": "Prepared split/group and image provenance; not patient-disjoint"
+    },
+    {
+      "path": "data/alzheimers/",
+      "purpose": "Authorized original images needed by selected manifest rows; not redistributed"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/posthoc_explainability/results/",
+      "purpose": "Archived per_case.csv, SHA256SUMS.json, 230 native maps and associated source images required for map verification/gallery"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/round2_corner_audit/results/",
+      "purpose": "Original per-image sample, predictions, support and mass CSVs plus full summary/manifests needed for independent full recomputation"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "source_repository": "https://github.com/TailsOS-hack/Dementia-Image-Classification",
+  "source_local_directory_name": "Neuro-Radiology-Database",
+  "source_head": "3b080e207aae9bfe55a9b54308b157a67d20a93c",
+  "note": "Snapshot from the current local working tree, including untracked audit artifacts. Git HEAD alone does not identify every file; file SHA256 hashes are authoritative. Original source files were not modified.",
+  "copied_files": [
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/corner_audit.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/round2_corner_audit/corner_audit.py",
+      "sha256": "0262f2cd0b4c62eaabd56814d2574e81e95b0c444bfdcb8f15e29cedf6c6b976",
+      "bytes": 13941
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/verify_and_plot.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/round2_corner_audit/verify_and_plot.py",
+      "sha256": "7c288ec99c0e4490593a25bace42fd8bb6a5d252716c13bff8efffaf0bfe4f52",
+      "bytes": 8153
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/posthoc_robustness/stress_test.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/posthoc_robustness/stress_test.py",
+      "sha256": "7955b7ad5c0d564bc25745e84f157c8544901d25ff2adb86f31bcc8e1b3d9f9a",
+      "bytes": 26923
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/training/train_candidate.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/training/train_candidate.py",
+      "sha256": "cbf67b7c6e842ce35eeef2e0c0a6a0752b865cec3399d7aa58bd5e8ff0e2a5e2",
+      "bytes": 24838
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/training/evaluate_candidates.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/training/evaluate_candidates.py",
+      "sha256": "7ecebb4db2843ab90152ee31d859e03e725d9c2d476637fada1d3b557bf8231d",
+      "bytes": 9184
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/posthoc_explainability/run_attribution_audit.py",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/posthoc_explainability/run_attribution_audit.py",
+      "sha256": "00360574518ae04ab3b437b32d049ffa02d669b457d402beb3860c4d9d0b5479",
+      "bytes": 16175
+    },
+    {
+      "source_path": "src/grad_cam.py",
+      "package_path": "source_snapshot/src/grad_cam.py",
+      "sha256": "b96976bccd9e2dd642c02ca1c1b19a7d1b06fc46574a79c68ae07b31d6d4b0ec",
+      "bytes": 7488
+    },
+    {
+      "source_path": "src/explainability_validation.py",
+      "package_path": "source_snapshot/src/explainability_validation.py",
+      "sha256": "314437bcfc580e80b8d48297027f147b1bd2a9b64c85bf273587491c6490168a",
+      "bytes": 11923
+    },
+    {
+      "source_path": "src/research_validation.py",
+      "package_path": "source_snapshot/src/research_validation.py",
+      "sha256": "051c2c33fde7fd10b7daff72f775e299f47a6a083b21137d079acc1cb559969c",
+      "bytes": 6693
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/validation_metrics.json",
+      "package_path": "results/validation_metrics.json",
+      "sha256": "fd9dc1655c54fd0e1d1657de6001e01647ef814ab4227867c47e4b9ff6e67188",
+      "bytes": 23471
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/native_map_summary.csv",
+      "package_path": "results/native_map_summary.csv",
+      "sha256": "1b82db4bedd3b1022758ef56cf1ea52525a16f4b5bdbfd0f22067070a703fdc0",
+      "bytes": 1746
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/protocol_before_inference.json",
+      "package_path": "results/protocol_before_inference.json",
+      "sha256": "a353f790167343a32600b72e5483b9727b76685593b0d2cfe10d1271853b2b70",
+      "bytes": 3265
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/verification.json",
+      "package_path": "provenance/historical/verification.json",
+      "sha256": "6eefb19cef11667ac38b3bf8d3bb8455b587855838deafd07d10b2443ca80185",
+      "bytes": 546
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/CORNER_AUDIT_COMPLETE.json",
+      "package_path": "provenance/historical/CORNER_AUDIT_COMPLETE.json",
+      "sha256": "ec70d99d31d354c8f7dcca1d7abb58e992c8d0e0603894e45e70393add6f448a",
+      "bytes": 621
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/native_location_mass.png",
+      "package_path": "figures/native_location_mass.png",
+      "sha256": "a19b68c52bcfb22a774d86c2eb9fdd8abc5a4e23c39e86ad24cebfc728640a36",
+      "bytes": 266437
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/native_location_mass.pdf",
+      "package_path": "figures/native_location_mass.pdf",
+      "sha256": "351274c115d11d0b14c677b37dc7db65d8d510297ac3b5021bdb61af2a6e3ba7",
+      "bytes": 32999
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/validation_masking_controls.png",
+      "package_path": "figures/validation_masking_controls.png",
+      "sha256": "587f3c661244bf2f3f2095ec45c50fbcdeec8cb7c56c19acd574f1e2b777a2f3",
+      "bytes": 449056
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/validation_masking_controls.pdf",
+      "package_path": "figures/validation_masking_controls.pdf",
+      "sha256": "066d361f82900104af1775979d5673997715e06b88ad7f3246912ed6be0f80b6",
+      "bytes": 35457
+    }
+  ],
+  "derived_files": [
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/summary.json",
+      "source_sha256": "2f23602431f3d9a668dcb6354d5f203c61e011ba016fe2b56deb369486e58a8c",
+      "package_path": "results/aggregate_summary.json",
+      "transformation": "Remove input_sha256 containing per-image paths/hashes; add _package_note."
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_corner_audit/results/validation_metrics.json",
+      "source_sha256": "fd9dc1655c54fd0e1d1657de6001e01647ef814ab4227867c47e4b9ff6e67188",
+      "package_path": "results/control_results.csv",
+      "transformation": "Export eight named aggregate fields to CSV; no inference or metric changes."
+    },
+    {
+      "source_path": "docs/kevin_paper_20261011/round2_training/round2.py",
+      "source_sha256": "94153e6af976fb8d31b9d3d2ae7f2ce6d011e3ef59a94909b4fdec3d4b867dcc",
+      "package_path": "source_snapshot/docs/kevin_paper_20261011/round2_training/round2.py",
+      "packaged_sha256": "391d1f5cac2f72726e5f80eec0001799156ea5f00e343fce8e8c548f58599f72",
+      "transformation": "Remove the unrelated operational-budget-authority field from protocol metadata; no training, augmentation, selection or evaluation logic changed."
+    }
+  ]
+}

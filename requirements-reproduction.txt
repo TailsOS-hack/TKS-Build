@@ -1,0 +1,9 @@
+# Observed historical dependencies; NOT a frozen or freshly validated environment.
+# Not needed for scripts/verify_package.py. Install only for an authorized reproduction.
+numpy
+Pillow
+torch
+torchvision
+matplotlib
+scikit-learn
+scipy

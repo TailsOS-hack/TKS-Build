@@ -1,0 +1,16 @@
+{
+  "status": "complete_verified",
+  "payloads": 133,
+  "final_manifest_sha256": "cf073cd79c21222666cb7cf75c74791262a8321cfa324fe132064d049ccc1963",
+  "script_sha256": "0262f2cd0b4c62eaabd56814d2574e81e95b0c444bfdcb8f15e29cedf6c6b976",
+  "plot_verify_script_sha256": "7c288ec99c0e4490593a25bace42fd8bb6a5d252716c13bff8efffaf0bfe4f52",
+  "validation_prediction_rows": 4160,
+  "metric_records_verified": 26,
+  "native_maps_hash_verified": 230,
+  "gallery_panels": 115,
+  "summary_png_pdf_pairs": 3,
+  "checkpoint_states_unchanged": true,
+  "heldout_inference": false,
+  "training": false,
+  "cloud_resources_used": false
+}

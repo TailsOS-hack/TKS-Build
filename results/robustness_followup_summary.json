@@ -1,0 +1,145 @@
+{
+  "label": "SEPARATE ROUND 2 ROBUSTNESS FOLLOW-UP \u2014 development evidence, not the core corner audit",
+  "verification_scope": "Read existing suite status, selection records, histories, protocol and source code; cross-checked selected epoch and stress loss across history, per-run selection and suite freeze. No training or inference rerun.",
+  "methods": {
+    "objective": "Supervised class-labelled cross-entropy with label smoothing 0.05 and inverse hash-group/class-group weighting; full-network AdamW.",
+    "field_of_view": "Complete resized 224 x 224 image retained; no crop.",
+    "augmentations": "Label-independent low-frequency texture or constant fill restricted to heuristic safe background, plus flip, intensity, noise and blur. Intensity/noise/blur may affect foreground.",
+    "selection": "0.5 clean validation NLL + 0.5 equally weighted mean of four stress-family NLLs, with clean accuracy, balanced-accuracy and NLL guards.",
+    "sample_counts": {
+      "train": 19023,
+      "clean_validation": 2705,
+      "stress_validation_per_scenario": 256,
+      "stress_per_class": 64
+    },
+    "stopping": "No early stopping before epoch 20; then 15 consecutive epochs without eligible improvement; all three runs stopped at validation plateau."
+  },
+  "runs": [
+    {
+      "seed": 20261011,
+      "completed_epochs": 21,
+      "selected_epoch": 6,
+      "status": "complete",
+      "stopping_reason": "validation_plateau",
+      "smoke_only": false,
+      "initial_stress_family_mean_nll": 0.06644595371207349,
+      "selected_stress_family_mean_nll": 0.03753379817642412,
+      "initial_clean_nll": 0.037470861446127345,
+      "selected_clean_nll": 0.03771493355987159,
+      "initial_clean_accuracy": 0.9992606284658041,
+      "selected_clean_accuracy": 0.9992606284658041,
+      "clean_validation_images": 2705,
+      "stress_validation_images_per_scenario": 256,
+      "selection_eligible": true
+    },
+    {
+      "seed": 20261012,
+      "completed_epochs": 33,
+      "selected_epoch": 18,
+      "status": "complete",
+      "stopping_reason": "validation_plateau",
+      "smoke_only": false,
+      "initial_stress_family_mean_nll": 0.056495202771944815,
+      "selected_stress_family_mean_nll": 0.03828350317173349,
+      "initial_clean_nll": 0.034769678698438965,
+      "selected_clean_nll": 0.03771570650873399,
+      "initial_clean_accuracy": 1.0,
+      "selected_clean_accuracy": 0.999630314232902,
+      "clean_validation_images": 2705,
+      "stress_validation_images_per_scenario": 256,
+      "selection_eligible": true
+    },
+    {
+      "seed": 20261013,
+      "completed_epochs": 35,
+      "selected_epoch": 20,
+      "status": "complete",
+      "stopping_reason": "validation_plateau",
+      "smoke_only": false,
+      "initial_stress_family_mean_nll": 0.054412305381580164,
+      "selected_stress_family_mean_nll": 0.037700807038525234,
+      "initial_clean_nll": 0.03694264987333554,
+      "selected_clean_nll": 0.03773871821510112,
+      "initial_clean_accuracy": 0.999630314232902,
+      "selected_clean_accuracy": 1.0,
+      "clean_validation_images": 2705,
+      "stress_validation_images_per_scenario": 256,
+      "selection_eligible": true
+    }
+  ],
+  "limitations": [
+    "Retrospective development on reused legacy data; prior test results were known.",
+    "Hash-distinct groups are not verified patient identities or source-disjoint cohorts.",
+    "Fixed stress validation was used for checkpoint selection; its improvements are development evidence, not independent validation.",
+    "Heuristic protected support is not anatomical segmentation; bright corner text can remain protected.",
+    "These results do not establish shortcut elimination, causal anatomical reliance, overall superiority or clinical readiness."
+  ],
+  "historical_implementation_checks": {
+    "status": "passed",
+    "unit_tests_reported": 9,
+    "smoke_only": true,
+    "note": "Historical evidence only; these tests were not rerun during packaging."
+  },
+  "source_files": [
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/suite_status.json",
+      "sha256": "3303d7685eb025e80d790d43efcb3cf89ba605ad972c9d5f9e11080fca939063"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/validation_selection_before_any_round2_test.json",
+      "sha256": "28e0252211e98279123e8ca62f6e014431551cf59a745928e4c7d48e5d57baf0"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/round2_training/round2.py",
+      "sha256": "94153e6af976fb8d31b9d3d2ae7f2ce6d011e3ef59a94909b4fdec3d4b867dcc"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/round2_training/README.md",
+      "sha256": "d7e5b0478c81e874c136af5877326035d29750b6f25e8891f5048eb987922be7"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/round2_training/prepared/protocol.json",
+      "sha256": "26b5c0a178a02f1cb82fad148aadc540a07cbfa93784950c49c7f941bb600ba2"
+    },
+    {
+      "path": "docs/kevin_paper_20261011/round2_training/verification/implementation_checks.json",
+      "sha256": "bcd111fb3ef4f75a8903e82cd4b9ef4eb75fd2955f27ec2de1fa0d39d781a0e0"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261011/history.json",
+      "sha256": "c5c62efae14ced6e3f44ef3c9b9af7f5f52bee5d3b003240fb99c962138ba15e"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261011/selection.json",
+      "sha256": "8d8f507e87cf688668a9c5ffca4840e893378dd10fec63a906de45f55c9bbb4b"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261011/run_status.json",
+      "sha256": "65516c32cfd4755d259a5471a92a0557f765855907b52df318a07e4f175302ef"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261012/history.json",
+      "sha256": "e6d29b715ac5814cdfbbca7d43417e619fb16954e8250555e148239c48d1aca8"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261012/selection.json",
+      "sha256": "41714987edfe6fa87e9b35eda16350c0e6585e1b040ffccd694e96ed1ce63f9f"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261012/run_status.json",
+      "sha256": "269bcdb4f94fe268f195e67c019d10c6bdd395ab40a02bbbf24cea14392bafa5"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261013/history.json",
+      "sha256": "040ab5a14952e27c7311a1b452b3faf5c550e8726c3bd711df1fcb22664effa8"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261013/selection.json",
+      "sha256": "60204edbd253d5cdbae3b458ae0c11e3177540e663f7fa95da54fa59ba37f907"
+    },
+    {
+      "path": "training_logs/experiments/kevin_20261011/round2_blackwell_20261011/stage_only_seed20261013/run_status.json",
+      "sha256": "2df8f50212eaebec1e7d3afb0c2f952507aa9c244a9eda1bf209adc145a2313b"
+    }
+  ]
+}

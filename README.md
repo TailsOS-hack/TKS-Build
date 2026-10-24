@@ -47,6 +47,8 @@ On the reused original100 maps, mean native corner score mass was **2.90% old / 
 
 These are anonymous cohort means derived from 200 hash-verified saved native arrays, not synthetic heatmaps. Each panel averages 100 reused original100 maps after per-map sum normalization. The [numeric grids](results/mean_native_gradcam.json) and [standard-library rebuild script](scripts/rebuild_mean_gradcam.py) are included. The script requires authorized archived arrays via `--source`; no raw MRI images or individual case identifiers are published. The package is standalone for reading and aggregate verification, but full inference still requires the excluded data and checkpoints.
 
+**200 versus 230 maps:** this new heatmap figure uses only the original100 subset: 100 cases × 2 models = 200 maps. The full corner audit's location analysis used 115 cases × 2 models = 230 maps. Its additional eight historical class-balanced cases and seven historically selected gallery cases (30 maps across both models) are excluded from the new cohort-mean figure. No cases were newly inferred or substituted.
+
 ## What this taught me
 
 A colored corner in an upsampled heatmap is a reason to investigate, not evidence that corner pixels cause the prediction. Comparing location, fill and equal-area controls changed the interpretation: central content mattered more in this audit. Related mitigation work used supervised robustness training with conservative background changes and validation guards; its [separate development results](docs/FOLLOWUP.md) do not prove source artifacts were removed. The hypothetical added-corner-marker experiment from the Learn article remains a different, proposed test.
@@ -70,7 +72,7 @@ This command needs only the Python standard library. It verifies packaged hashes
 
 ## Data, reproducibility and scope
 
-No raw MRI images, individual-case predictions, native-map arrays, model weights or credentials are included. Full inference reproduction requires authorized original inputs listed in [the omitted-input manifest](provenance/omitted_inputs_manifest.json). [Reproduction instructions](docs/REPRODUCIBILITY.md) explain that dependency explicitly. This repository can be inspected and its aggregates checked without those inputs; it is not a self-contained clinical dataset or diagnostic tool.
+No raw MRI images, individual-case predictions, individual native-map arrays, model weights or credentials are included. The published mean grids are cohort aggregates. Full inference reproduction requires authorized original inputs listed in [the omitted-input manifest](provenance/omitted_inputs_manifest.json). [Reproduction instructions](docs/REPRODUCIBILITY.md) explain that dependency explicitly. This repository can be inspected and its aggregates checked without those inputs; it is not a self-contained clinical dataset or diagnostic tool.
 
 The original research repository is [Dementia-Image-Classification](https://github.com/TailsOS-hack/Dementia-Image-Classification), locally still named `Neuro-Radiology-Database`. These materials were copied from its working tree; some audit evidence was untracked, so [file hashes](provenance/source_manifest.json), rather than the source Git commit alone, identify this snapshot. The original repository was preserved.
 

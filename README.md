@@ -41,6 +41,12 @@ On the reused original100 maps, mean native corner score mass was **2.90% old / 
 
 ![Native attribution location](figures/native_location_mass.png)
 
+## Actual Grad-CAM heatmaps
+
+![Actual saved cohort-mean Grad-CAM maps](figures/mean_native_gradcam.svg)
+
+These are anonymous cohort means derived from 200 hash-verified saved native arrays, not synthetic heatmaps. Each panel averages 100 reused original100 maps after per-map sum normalization. The [numeric grids](results/mean_native_gradcam.json) and [standard-library rebuild script](scripts/rebuild_mean_gradcam.py) are included. The script requires authorized archived arrays via `--source`; no raw MRI images or individual case identifiers are published. The package is standalone for reading and aggregate verification, but full inference still requires the excluded data and checkpoints.
+
 ## What this taught me
 
 A colored corner in an upsampled heatmap is a reason to investigate, not evidence that corner pixels cause the prediction. Comparing location, fill and equal-area controls changed the interpretation: central content mattered more in this audit. Related mitigation work used supervised robustness training with conservative background changes and validation guards; its [separate development results](docs/FOLLOWUP.md) do not prove source artifacts were removed. The hypothetical added-corner-marker experiment from the Learn article remains a different, proposed test.
